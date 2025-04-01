@@ -14,6 +14,7 @@ body {
   align-items: center;
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
+  position: relative;
 }
 
 .card {
@@ -28,6 +29,8 @@ body {
   gap: 20px;
   min-height: clamp(300px, 80%, 450px);
   width: clamp(300px, 80%, 800px);
+  position: relative;
+  z-index: 20;
 }
 
 #dateyear {
@@ -36,6 +39,8 @@ body {
 
 #message {
   font-size: 16px;
+  text-align: center;
+  line-height: 30px;
 }
 
 #yearold {
@@ -45,6 +50,7 @@ body {
 
 #birthdayTime {
   font-size: 24px;
+  text-align: center;
 }
 
 #countdown {
@@ -59,4 +65,160 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#countdown h2 {
+  font-size: 30px;
+}
+
+#countdown small {
+  font-size: 18px;
+}
+
+.globos {
+  position: absolute;
+  width: 250px;
+}
+
+.globos.multiple {
+  left: -125px;
+  z-index: 10;
+  top: -125px;
+}
+
+.globos.unico {
+  right: -50px;
+  z-index: 10;
+  bottom: -90px;
+  width: 100px;
+}
+
+.corazon-gif {
+  content: url(images/corazon.gif);
+  width: 40px;
+  position: absolute;
+  z-index: 50;
+  bottom: 10px;
+  animation: subir 10s linear infinite;
+}
+
+@keyframes subir {
+  0% {
+    -webkit-transform: scale(1) translateY(0) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.4) translateY(-100dvh) rotate(360deg);
+    opacity: 0.4;
+  }
+}
+
+.corazon-gif.c1 {
+  left: 50px;
+}
+
+.corazon-gif.c2 {
+  left: 20%;
+}
+
+.corazon-gif.c3 {
+  left: 42%;
+}
+
+.corazon-gif.c4 {
+  left: 65%;
+}
+
+.corazon-gif.c5 {
+  right: 50px;
+}
+
+.pastel-gif {
+  content: url(images/pastel.gif);
+  width: 40px;
+  position: absolute;
+  z-index: 60;
+  top: 10px;
+  animation: bajar 10s linear infinite;
+}
+
+@keyframes bajar {
+  0% {
+    -webkit-transform: scale(1) translateY(0) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.4) translateY(100dvh) rotate(360deg);
+    opacity: 0.4;
+  }
+}
+
+.pastel-gif.p1 {
+  left: 50px;
+}
+
+.pastel-gif.p2 {
+  left: 20%;
+}
+
+.pastel-gif.p3 {
+  left: 42%;
+}
+
+.pastel-gif.p4 {
+  left: 65%;
+}
+
+.pastel-gif.p5 {
+  right: 50px;
+}
+
+@media (width <= 900px) {
+  #dateyear {
+    font-size: 17px;
+  }
+
+  #message {
+    font-size: 14px;
+  }
+
+  #yearold {
+    font-size: 20px;
+  }
+
+  #birthdayTime {
+    font-size: 20px;
+  }
+  #countdown h2 {
+    font-size: 18px;
+  }
+
+  #countdown small {
+    font-size: 15px;
+  }
+}
+
+@media (450px <= width <= 900px) {
+  .globos.multiple {
+    left: -90px;
+  }
+}
+
+@media (width <= 450px) {
+  .globos {
+    width: 100px;
+  }
+
+  .globos.multiple {
+    left: -30px;
+    z-index: 10;
+    top: -50px;
+  }
+
+  .globos.unico {
+    right: -20px;
+    z-index: 10;
+    bottom: -20px;
+    width: 60px;
+  }
 }

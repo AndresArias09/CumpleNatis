@@ -22,7 +22,7 @@ const bornYear = 2004;
 const age =
   currentDateTime < birthday
     ? currentYear - bornYear
-    : currentYear - bornYear + 1;
+    : currentYear - bornYear;
 
 // Set background year
 dateyear.innerText = currentYear;

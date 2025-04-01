@@ -204,7 +204,7 @@ body {
   }
 }
 
-@media (width <= 450px) {
+@media (width <= 1300px) {
   .globos {
     width: 100px;
   }

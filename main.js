@@ -20,9 +20,7 @@ const bornYear = 2004;
 
 //JavaScript Ternary Operator
 const age =
-  currentDateTime < birthday
-    ? currentYear - bornYear
-    : currentYear - bornYear;
+  currentDateTime < birthday ? currentYear - bornYear : currentYear - bornYear;
 
 // Set background year
 dateyear.innerText = currentYear;
@@ -53,7 +51,7 @@ function updateCountdown() {
 
   const April =
     now.getMonth() === birthday.getMonth() &&
-    now.getDay() === birthday.getDay();
+    now.getDate() === birthday.getDate();
 
   if (April) {
     message.innerHTML =
